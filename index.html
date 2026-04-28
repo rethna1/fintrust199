@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" href="icon-192.png">
+
+<link rel="apple-touch-icon" href="icon-192.png">
+
+<link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
 <title>FinTrust Creations – Mutual Fund Tools</title>
 
@@ -325,6 +330,11 @@ function topFunction() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
-
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("Service Worker Registered"));
+}
+</script>
 </body>
 </html>
